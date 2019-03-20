@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     tools:context=".Registration"
+    android:label="@string/actionbar_title"
     android:background="@color/colorWhite">
 <!--To scroll  the app horizontally or vertically -->
     <ScrollView
@@ -52,6 +53,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp" />
                 </TableRow>
@@ -68,8 +70,8 @@
                         android:id="@+id/first_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/first_name"
-                        android:textStyle="italic"
+                        android:text="@string/first_name"  
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="90dp"
                         tools:layout_editor_absoluteY="254dp" />
                 </TableRow>
@@ -94,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/last_name"
-                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="90dp"
                         tools:layout_editor_absoluteY="254dp" />
                 </TableRow>
@@ -120,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/dob"
-                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="90dp"
                         tools:layout_editor_absoluteY="254dp" />
                 </TableRow>
@@ -163,7 +165,7 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:text="@string/email"
-                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="90dp"
                         tools:layout_editor_absoluteY="254dp" />
                 </TableRow>
@@ -190,7 +192,7 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:text="@string/password"
-                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="90dp"
                         tools:layout_editor_absoluteY="254dp" />
                 </TableRow>
@@ -218,7 +220,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text=""
-                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp" />
                 </TableRow>
@@ -233,8 +235,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:onClick="registerUser"
-                        android:text="@string/button_text"
-                        android:textStyle="italic"
+                        android:text="@string/register_button_label"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp" />
                 </TableRow>

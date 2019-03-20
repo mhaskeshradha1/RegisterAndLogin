@@ -4,12 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/quiz_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/quiz_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ResultAnalysis"></activity>
+        <activity android:name=".Questions" />
+        <activity android:name=".LandingPage" />
+        <activity android:name=".Login_Credential" />
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +21,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".Registration" android:parentActivityName=".Login"></activity>
-
+        <activity
+            android:name=".Registration"
+            android:parentActivityName=".Login" />
     </application>
 
 </manifest>

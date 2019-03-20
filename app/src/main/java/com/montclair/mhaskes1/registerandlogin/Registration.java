@@ -19,6 +19,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.montclair.mhaskes1.registerandlogin.model.User;
+import com.montclair.mhaskes1.registerandlogin.service.LoginService;
+
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,7 +29,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
+ * Registrer user Activity
  */
 public class Registration extends AppCompatActivity {
 
@@ -40,7 +43,6 @@ public class Registration extends AppCompatActivity {
     Date selectedDate;
     TextView dateTextView;
 
-
     /**
      *
      * @param savedInstanceState
@@ -51,6 +53,7 @@ public class Registration extends AppCompatActivity {
 
         setContentView(R.layout.activity_registration);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_done_white_24dp);
+
 
         Intent login = getIntent();
         String loginMsg = login.getExtras().getString("loginMsg");
@@ -90,7 +93,9 @@ public class Registration extends AppCompatActivity {
         });
     }
 
+
     /**
+     * Validate user and send user to regitration to LoginService layer
      *
      * @param view
      */
@@ -113,6 +118,15 @@ public class Registration extends AppCompatActivity {
             result.setText("Please enter value in RED field(s) above");
             Toast.makeText(this, "Please enter value in RED fields ", Toast.LENGTH_LONG).show();
             return;
+        } else {
+
+            //save user
+            User user = LoginService.addUser(firstnamevalue.getText().toString(),
+                    lastnamevalue.getText().toString(),
+                    selectedDate,
+                    email.getText().toString(),
+                    passwordvalue.getText().toString()
+                    );
         }
         onBackPressed();
     }
@@ -127,7 +141,9 @@ public class Registration extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * Initialize intent based on validation
+     */
     @Override
     public void onBackPressed() {
         Log.d("please", "onBackPressed: ");
