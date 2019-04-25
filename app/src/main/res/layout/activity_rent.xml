@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LandingPage"
-    android:label="@string/actionbar_title"
-    android:background="@color/colorWhite"
-    android:orientation="vertical">
-
+    tools:context=".rent">
 
     <ScrollView
         android:id="@+id/layout"
@@ -70,11 +66,10 @@
                         <Button
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            style="@style/Base.Widget.AppCompat.Button.Colored"
                             android:gravity="center"
                             android:layout_weight="1"
                             android:text="Rent"
-                            android:onClick="gotoRent"
                             />
 
                     </LinearLayout>
@@ -93,28 +88,11 @@
                         android:contentDescription="@string/app_name" />
 
                 </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    >
-
-                    <TextView
-                        android:id="@+id/tv_rules"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/game_rules"
-                        android:layout_margin="50dp"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
-                        >
-                    </TextView>
-
-                </TableRow>
 
             </TableLayout>
 
 
         </HorizontalScrollView>
     </ScrollView>
-
 
 </android.support.constraint.ConstraintLayout>

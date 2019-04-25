@@ -35,7 +35,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="0dp"
@@ -46,7 +46,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="match_parent"
@@ -60,12 +60,12 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/first_name"
                         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <EditText
                         android:id="@+id/firstnamevalue"
                         android:layout_width="fill_parent"
@@ -90,7 +90,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/last_name"
                         android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <EditText
                         android:id="@+id/lastnamevalue"
                         android:layout_width="fill_parent"
@@ -116,7 +116,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/dob"
                         android:layout_width="wrap_content"
@@ -129,7 +129,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
 <!--Date Picker For adding Date Format to Registration Form -->
                     <DatePicker
                         android:id="@+id/datepicker"
@@ -145,7 +145,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <ImageButton
                         android:id="@+id/imageButton"
                         android:layout_width="wrap_content"
@@ -158,7 +158,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/email"
                         android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <EditText
                         android:id="@+id/emailvalue"
                         android:layout_width="fill_parent"
@@ -185,7 +185,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/password"
                         android:layout_width="wrap_content"
@@ -199,7 +199,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="10dp">
+                    >
                     <EditText
                         android:id="@+id/passwordvalue"
                         android:layout_width="fill_parent"
@@ -213,7 +213,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="10dp">
+                    >
                     <TextView
                         android:id="@+id/result"
                         android:layout_width="match_parent"
@@ -228,7 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="10dp">
+                    >
                     <Button
                         android:id="@+id/registerbutton"
                         android:layout_width="wrap_content"
