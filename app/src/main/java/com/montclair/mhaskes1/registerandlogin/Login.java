@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
      */
     public void gotoRegisteration(View view) {
         Intent registerIntent = new Intent(this, Registration.class);
-        registerIntent.putExtra("loginMsg", "Register New KalaKrutee.com User");
+        registerIntent.putExtra("loginMsg", "Register New Bayout User");
         startActivityForResult(registerIntent, Constants.REGISTER_USER);
     }
 

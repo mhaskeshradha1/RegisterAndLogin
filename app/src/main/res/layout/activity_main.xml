@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/logo" />
+        android:layout_weight="2"
+        app:srcCompat="@drawable/bologo" />
 <!-- to do add textview for my nest id -->
     <TextView
         android:id="@+id/textView"
@@ -29,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="1"
+        android:textAlignment="viewEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:text="@string/mhaskes1"
+        android:text="@string/realEstateImage"
         />
 </LinearLayout >
