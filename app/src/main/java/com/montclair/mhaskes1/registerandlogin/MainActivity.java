@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.Window;
 
 import com.montclair.mhaskes1.registerandlogin.DataProvider.LoginProvider;
-import com.montclair.mhaskes1.registerandlogin.ml.GuessIris;
+import com.montclair.mhaskes1.registerandlogin.ml.GuessPrice;
 import com.montclair.mhaskes1.registerandlogin.service.LoginService;
 
 import java.io.BufferedReader;
@@ -57,12 +57,15 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             //Load model
-            Log.d("Main Activity ", "onCreate: Loading ML " + GuessIris.knn);
+            Log.d("Main Activity ", "onCreate: Loading ML " + GuessPrice.knn);
             ;
-            Reader trainerData = new InputStreamReader(getResources().openRawResource(R.raw.irisdata));
-            Reader testData = new InputStreamReader(getResources().openRawResource(R.raw.iristest));
-            GuessIris.loadResource(trainerData, testData);
-            Log.d("Main Activity ", "onCreate: Loaded ML " + GuessIris.knn);
+            Reader trainerData = new InputStreamReader(getResources().openRawResource(R.raw.re_train));
+            Reader testData = new InputStreamReader(getResources().openRawResource(R.raw.re_test));
+            Reader svmData = new InputStreamReader(getResources().openRawResource(R.raw.svm));
+            GuessPrice.loadResource(trainerData, testData, svmData);
+            Log.d("Main Activity ", "onCreate: Loaded ML " + GuessPrice.knn);
+            Log.d("Main Activity ", "Predict: " +
+                    GuessPrice.predict(30, 34, 12));
         } catch (Exception e){
             e.printStackTrace();
         }

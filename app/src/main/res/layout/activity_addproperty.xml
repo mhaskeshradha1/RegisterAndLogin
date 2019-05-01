@@ -4,55 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rent">
+    tools:context=".addproperty">
 
     <ScrollView
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorWhite"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal|vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@color/colorWhite">
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <HorizontalScrollView
             android:id="@+id/horizontalView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:scrollbars="horizontal|vertical"
-            android:background="@color/colorWhite">
+            android:background="@color/colorWhite"
+            android:scrollbars="horizontal|vertical">
 
             <TableLayout
                 android:id="@+id/table"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/colorWhite"
                 android:stretchColumns="0"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp"
-                android:background="@color/colorWhite"
-                >
+                tools:layout_editor_absoluteY="0dp">
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    >
+                    android:layout_height="200dp">
 
                     <LinearLayout
                         android:id="@+id/ll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <Button
-                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            style="@style/Base.Widget.AppCompat.Button.Colored"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:onClick="gotoBuy"
                             android:text="Buy"
                             android:textSize="30sp" />
 
@@ -67,11 +64,12 @@
                             android:textSize="30sp" />
 
                         <Button
-                            style="@style/Base.Widget.AppCompat.Button.Colored"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:onClick="gotoRent"
                             android:text="Rent"
                             android:textSize="30sp" />
 
@@ -84,24 +82,23 @@
                             android:onClick="gotoPredict"
                             android:text="Predict"
                             android:textSize="30sp" />
-
-
                     </LinearLayout>
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    >
+                    android:layout_height="200dp">
 
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:adjustViewBounds="true"
-                        app:srcCompat="@drawable/bayout_hrz"
-                        android:contentDescription="@string/app_name" />
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/bayout_hrz" />
 
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="100dp">
@@ -257,7 +254,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Expected Rent per Unit"></TextView>
+                        android:text="Expected Price per Unit"></TextView>
 
                 </TableRow>
 
@@ -308,17 +305,13 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:onClick="predictValue"
-                        android:text="Rent Property"
+                        android:text="Add Property"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp" />
                 </TableRow>
-
-
-
-        </TableLayout>
+            </TableLayout>
 
 
         </HorizontalScrollView>
     </ScrollView>
-
 </android.support.constraint.ConstraintLayout>

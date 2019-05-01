@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rent">
+    tools:context=".Predict">
 
     <ScrollView
         android:id="@+id/layout"
@@ -52,7 +52,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:onClick="gotoBuy"
                             android:text="Buy"
                             android:textSize="30sp" />
 
@@ -67,16 +66,17 @@
                             android:textSize="30sp" />
 
                         <Button
-                            style="@style/Base.Widget.AppCompat.Button.Colored"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:onClick="gotoRent"
                             android:text="Rent"
                             android:textSize="30sp" />
 
                         <Button
-                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            style="@style/Base.Widget.AppCompat.Button.Colored"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -84,6 +84,7 @@
                             android:onClick="gotoPredict"
                             android:text="Predict"
                             android:textSize="30sp" />
+
 
 
                     </LinearLayout>
@@ -102,177 +103,214 @@
                         android:contentDescription="@string/app_name" />
 
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <TextView
                         android:id="@+id/tv_br"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Number of bedroom"
                         android:layout_margin="10dp"
-                        android:text="Number of bedroom"></TextView>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </TextView>
+
                 </TableRow>
-                >
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <EditText
                         android:id="@+id/et_bedroom"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="1"
                         android:layout_margin="10dp"
                         android:inputType="number"
-                        android:text="1"></EditText>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </EditText>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <TextView
                         android:id="@+id/tv_bb"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Number of bathroom"
                         android:layout_margin="10dp"
-                        android:text="Number of bathroom"></TextView>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </TextView>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <EditText
                         android:id="@+id/et_bathroom"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="1"
                         android:layout_margin="10dp"
                         android:inputType="number"
-                        android:text="1"></EditText>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </EditText>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <TextView
                         android:id="@+id/tv_dit"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Distance from station (meters)"
                         android:layout_margin="10dp"
-                        android:text="Distance from station (miles)"></TextView>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </TextView>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <EditText
                         android:id="@+id/et_station"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="10"
                         android:layout_margin="10dp"
                         android:inputType="number"
-                        android:text="10"></EditText>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </EditText>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <TextView
                         android:id="@+id/tv_store"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Number of Stores around"
                         android:layout_margin="10dp"
-                        android:text="Number of Stores around"></TextView>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </TextView>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <EditText
                         android:id="@+id/et_store"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="10"
                         android:layout_margin="10dp"
                         android:inputType="number"
-                        android:text="10"></EditText>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </EditText>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <TextView
                         android:id="@+id/tv_yr"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Age of House"
                         android:layout_margin="10dp"
-                        android:text="Age of House"></TextView>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </TextView>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <EditText
                         android:id="@+id/et_age"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="20"
                         android:layout_margin="10dp"
                         android:inputType="number"
-                        android:text="20"></EditText>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </EditText>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <TextView
                         android:id="@+id/tv_pr"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Expected Price per Unit"
                         android:layout_margin="10dp"
-                        android:text="Expected Rent per Unit"></TextView>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </TextView>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    >
 
                     <EditText
                         android:id="@+id/et_price"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="10"
                         android:layout_margin="10dp"
                         android:inputType="number"
-                        android:text="10"></EditText>
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        >
+                    </EditText>
 
                 </TableRow>
 
@@ -303,19 +341,16 @@
 
                     <Button
                         android:id="@+id/buybutton"
-                        style="@style/Base.Widget.AppCompat.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:text="@string/prdict_button_label"
                         android:onClick="predictValue"
-                        android:text="Rent Property"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp" />
                 </TableRow>
-
-
-
-        </TableLayout>
+            </TableLayout>
 
 
         </HorizontalScrollView>

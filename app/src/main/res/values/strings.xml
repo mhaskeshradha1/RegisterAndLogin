@@ -27,4 +27,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="parcel_question">question</string>
     <string name="actionbar_title">Guess Flower</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="student_updated">Student Updated</string>
+    <string name="action_delete">Delete</string>
+    <string name="student_deleted">Student deleted</string>
+    <string name="delete_student_title">Delete Student</string>
+    <string name="delete_all_title">Delete All Students</string>
+    <string name="sort_by_first_name">Sort By First Name</string>
+    <string name="sort_by_last_name">Sort By Last Name</string>
+    <string name="sort_by_priority">Sort By Priority</string>
+    <string name="logout">logout</string>
 </resources>

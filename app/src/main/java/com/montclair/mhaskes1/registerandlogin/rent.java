@@ -3,6 +3,8 @@ package com.montclair.mhaskes1.registerandlogin;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.montclair.mhaskes1.registerandlogin.model.User;
@@ -48,5 +50,40 @@ public class rent extends AppCompatActivity {
         loginCredIntent.putExtra("user", user);
         startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
 
+    }
+
+    public void gotoPredict(View view) {
+
+        Intent loginCredIntent = new Intent(this, Predict.class);
+        loginCredIntent.putExtra("loginMsg", "Login User");
+        loginCredIntent.putExtra("user", user);
+        startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
+
+    }
+
+    public void predictValue(View view) {
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        switch (id){
+            case R.id.action_logout:
+                Intent loginCredIntent = new Intent(this, Login.class);
+                loginCredIntent.putExtra("loginMsg", "Login User");
+                startActivityForResult(loginCredIntent, Constants.LOGIN_USER);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

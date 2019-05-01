@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.montclair.mhaskes1.registerandlogin.DataProvider.QuestionProvider;
 import com.montclair.mhaskes1.registerandlogin.ml.GuessIris;
+import com.montclair.mhaskes1.registerandlogin.ml.GuessPrice;
 import com.montclair.mhaskes1.registerandlogin.model.QuestionAnswer;
 import com.montclair.mhaskes1.registerandlogin.util.Constants;
 

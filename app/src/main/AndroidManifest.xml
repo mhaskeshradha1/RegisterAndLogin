@@ -9,13 +9,18 @@
         android:roundIcon="@mipmap/quiz_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".rent"></activity>
+        <activity android:name=".LineActivity"></activity>
+        <activity android:name=".updateproperty" />
+        <activity android:name=".addproperty" />
+        <activity android:name=".Predict" />
+        <activity android:name=".rent" />
         <activity android:name=".sell" />
         <activity android:name=".buy" />
         <activity android:name=".ResultAnalysis" />
         <activity android:name=".Questions" />
         <activity android:name=".LandingPage" />
         <activity android:name=".Login_Credential" />
+        <activity android:name=".BarActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

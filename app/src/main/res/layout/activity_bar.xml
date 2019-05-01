@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".BarActivity">
+<!--
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal|vertical"
+        android:background="@color/colorWhite">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:background="@color/colorWhite">-->
+
+            <!--  Linear layout used to separate barchart from other elements    -->
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="50dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Distance to Station : 0 meters, Stores count : 0, Age: 10 years"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_margin="5dp"
+                    />
+
+
+                <!--   barchart elements    -->
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    ></com.github.mikephil.charting.charts.BarChart>
+
+
+                <Button
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="plotLine"
+                    android:layout_weight="1"
+                    android:text="Plot Line Chart"/>
+<!--
+                <Button
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="goHome"
+                    android:layout_weight="1"
+                    android:text="Predict Another Home" />-->
+
+            </LinearLayout>
+<!--
+    </HorizontalScrollView>
+    </ScrollView>-->
+
+</android.support.constraint.ConstraintLayout>
