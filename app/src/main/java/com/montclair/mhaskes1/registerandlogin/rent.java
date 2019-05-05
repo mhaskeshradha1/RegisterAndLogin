@@ -1,6 +1,8 @@
 package com.montclair.mhaskes1.registerandlogin;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,7 +33,7 @@ public class rent extends AppCompatActivity {
         loginCredIntent.putExtra("loginMsg", "Login User");
         loginCredIntent.putExtra("user", user);
         startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
-
+        finish();
     }
 
     public void gotoSell(View view) {
@@ -62,6 +64,23 @@ public class rent extends AppCompatActivity {
     }
 
     public void predictValue(View view) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Fetching list of properties matching your criteria")
+                .setTitle("Rent Listing")
+                .setPositiveButton("View Listing", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // FIRE ZE MISSILES!
+                        Intent loginCredIntent = new Intent(rent.this, LandingPage.class);
+                        loginCredIntent.putExtra("loginMsg", "Login User");
+                        loginCredIntent.putExtra("user", user);
+                        startActivityForResult(loginCredIntent, Constants.LANDING_PAGE);
+                    }
+                })
+                .setNegativeButton("Dismiss", null);
+        // Create the AlertDialog object and return it
+        builder.create();
+        builder.show();
+
     }
 
     @Override

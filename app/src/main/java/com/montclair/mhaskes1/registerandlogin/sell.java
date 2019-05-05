@@ -64,12 +64,18 @@ public class sell extends AppCompatActivity {
 
     public void gotoaddproperty(View view) {
         Intent intent = new Intent(sell.this,addproperty.class);
+        intent.putExtra("loginMsg", "Login User");
+        intent.putExtra("user", user);
         startActivity(intent);
+        finish();
     }
 
     public void gotoupdateproperty(View view) {
         Intent intent = new Intent(sell.this, updateproperty.class);
+        intent.putExtra("loginMsg", "Login User");
+        intent.putExtra("user", user);
         startActivity(intent);
+        finish();
     }
 
     @Override
@@ -89,6 +95,7 @@ public class sell extends AppCompatActivity {
                 Intent loginCredIntent = new Intent(this, Login.class);
                 loginCredIntent.putExtra("loginMsg", "Login User");
                 startActivityForResult(loginCredIntent, Constants.LOGIN_USER);
+                finish();
                 break;
         }
 

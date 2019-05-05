@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.montclair.mhaskes1.registerandlogin.model.User;
 import com.montclair.mhaskes1.registerandlogin.util.Constants;
 
 public class addproperty extends AppCompatActivity {
@@ -27,15 +28,21 @@ public class addproperty extends AppCompatActivity {
     public static final String Price = "price";
     //public static final String Email = "emailKey";
 
+    User user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addproperty);
+
+        user = getIntent().getExtras().getParcelable("user");
+
         numberOfbedroom = (EditText) findViewById(R.id.et_bedroom);
         numberOfbathroom = (EditText) findViewById(R.id.et_bedroom);
         stationdistance = (EditText) findViewById(R.id.et_station);
         age = (EditText) findViewById(R.id.et_age);
         stores = (EditText) findViewById(R.id.et_store);
+        price = (EditText) findViewById(R.id.et_price);
 
         sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
@@ -62,18 +69,38 @@ public class addproperty extends AppCompatActivity {
 
     public void gotoSell(View view) {
         Intent intent = new Intent(addproperty.this, sell.class);
+        intent.putExtra("loginMsg", "Login User");
+        intent.putExtra("user", user);
         startActivity(intent);
+
+        finish();
     }
 
     public void gotoRent(View view) {
         Intent intent = new Intent(addproperty.this, rent.class);
+        intent.putExtra("loginMsg", "Login User");
+        intent.putExtra("user", user);
         startActivity(intent);
+        finish();
 
     }
 
     public void gotoPredict(View view) {
         Intent intent = new Intent(addproperty.this, Predict.class);
+        intent.putExtra("loginMsg", "Login User");
+        intent.putExtra("user", user);
         startActivity(intent);
+        finish();
+    }
+
+    public void gotoBuy(View view) {
+
+        Intent loginCredIntent = new Intent(this, buy.class);
+        loginCredIntent.putExtra("loginMsg", "Login User");
+        loginCredIntent.putExtra("user", user);
+        startActivity(loginCredIntent);
+        finish();
+
     }
 
     public void predictValue(View view) {
@@ -94,7 +121,11 @@ public class addproperty extends AppCompatActivity {
         editor.putString(StationDistance, dist);
         editor.commit();
 
-
+        Intent intent = new Intent(addproperty.this, updateproperty.class);
+        intent.putExtra("loginMsg", "Login User");
+        intent.putExtra("user", user);
+        startActivity(intent);
+        finish();
     }
 
     @Override

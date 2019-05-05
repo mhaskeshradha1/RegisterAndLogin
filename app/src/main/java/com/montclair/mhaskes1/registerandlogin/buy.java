@@ -51,6 +51,7 @@ public class buy extends AppCompatActivity {
         loginCredIntent.putExtra("loginMsg", "Login User");
         loginCredIntent.putExtra("user", user);
         startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
+        finish();
 
     }
 
@@ -60,6 +61,7 @@ public class buy extends AppCompatActivity {
         loginCredIntent.putExtra("loginMsg", "Login User");
         loginCredIntent.putExtra("user", user);
         startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
+        finish();
 
     }
 
@@ -69,6 +71,7 @@ public class buy extends AppCompatActivity {
         loginCredIntent.putExtra("loginMsg", "Login User");
         loginCredIntent.putExtra("user", user);
         startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
+        finish();
 
     }
 
@@ -78,6 +81,7 @@ public class buy extends AppCompatActivity {
         loginCredIntent.putExtra("loginMsg", "Login User");
         loginCredIntent.putExtra("user", user);
         startActivityForResult(loginCredIntent, Constants.QUESTIONS_PAGE);
+        finish();
 
     }
 
@@ -99,6 +103,7 @@ public class buy extends AppCompatActivity {
                 Intent loginCredIntent = new Intent(this, Login.class);
                 loginCredIntent.putExtra("loginMsg", "Login User");
                 startActivityForResult(loginCredIntent, Constants.LOGIN_USER);
+                finish();
                 break;
         }
 
@@ -107,38 +112,17 @@ public class buy extends AppCompatActivity {
 
 
     public void predictValue(View view) {
-
-        Double bedDouble = new Double(bed.getText().toString());
-        Double bathDouble = new Double(bath.getText().toString());
-        Double stationDouble = new Double(station.getText().toString());
-        Double storeDouble = new Double(store.getText().toString());
-        Double ageDouble = new Double(age.getText().toString());
-        Double priceDouble = new Double(expected.getText().toString());
-
-        Double addValue = 0.0;
-
-        Log.d("Buy Activity ", "onPredict: addValue " + addValue);
-        Log.d("Buy Activity ", "onPredict: bathDouble " + bathDouble);
-        Log.d("Buy Activity ", "onPredict: bedDouble " + bedDouble);
-
-
-        if(bathDouble > bedDouble ){
-            addValue = (bathDouble - bedDouble) * 1.5;
-        }
-
-        Log.d("Buy Activity ", "onPredict: After bedbath compare addValue " + addValue);
-
-        addValue = GuessPrice.predict(ageDouble, stationDouble, storeDouble) + addValue;
-
-        Log.d("Buy Activity ", "onPredict: After GuessPrice addValue " + addValue);
-
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(String.format("Your Expected : %s \nOur Prediction : %s ", priceDouble, addValue))
-                .setTitle("Prediction value")
-                .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+        builder.setMessage("Fetching list of properties matching your criteria")
+                .setTitle("Buy Listing")
+                .setPositiveButton("View Listing", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // FIRE ZE MISSILES!
-                       // onNextPressed(questionAnswer);
+
+                        Intent loginCredIntent = new Intent(buy.this, LandingPage.class);
+                        loginCredIntent.putExtra("loginMsg", "Login User");
+                        loginCredIntent.putExtra("user", user);
+                        startActivityForResult(loginCredIntent, Constants.LANDING_PAGE);
                     }
                 })
                 .setNegativeButton("Dismiss", null);
