@@ -54,6 +54,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="Buy"
+                            android:onClick="gotoBuy"
                             android:textSize="30sp" />
 
                         <Button
@@ -82,7 +83,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:onClick="gotoPredict"
                             android:text="Predict"
                             android:textSize="30sp" />
 
