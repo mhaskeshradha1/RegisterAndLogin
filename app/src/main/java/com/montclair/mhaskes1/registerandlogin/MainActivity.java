@@ -10,10 +10,8 @@ import android.view.Window;
 
 import com.montclair.mhaskes1.registerandlogin.DataProvider.LoginProvider;
 import com.montclair.mhaskes1.registerandlogin.ml.GuessPrice;
-import com.montclair.mhaskes1.registerandlogin.service.LoginService;
+import com.montclair.mhaskes1.registerandlogin.ml.GuessTransit;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
@@ -59,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
             //Load model
             Log.d("Main Activity ", "onCreate: Loading ML " + GuessPrice.knn);
             ;
-            Reader trainerData = new InputStreamReader(getResources().openRawResource(R.raw.re_train));
-            Reader testData = new InputStreamReader(getResources().openRawResource(R.raw.re_test));
+            Reader trainerData = new InputStreamReader(getResources().openRawResource(R.raw.njtrain));
+            Reader testData = new InputStreamReader(getResources().openRawResource(R.raw.njtest));
             Reader svmData = new InputStreamReader(getResources().openRawResource(R.raw.svm));
-            GuessPrice.loadResource(trainerData, testData, svmData);
+            GuessTransit.loadResource(trainerData, testData, svmData);
             Log.d("Main Activity ", "onCreate: Loaded ML " + GuessPrice.knn);
-            Log.d("Main Activity ", "Predict: " +
-                    GuessPrice.predict(30, 34, 12));
+            //Log.d("Main Activity ", "Predict: " +
+                    //GuessPrice.predict(30, 34, 12));
         } catch (Exception e){
             e.printStackTrace();
         }

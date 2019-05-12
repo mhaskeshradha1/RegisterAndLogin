@@ -79,7 +79,7 @@ public class Login extends AppCompatActivity {
      * @param view
      */
     public void gotoLoginCred(View view) {
-        Intent loginCredIntent = new Intent(this, Login_Credential.class);
+        Intent loginCredIntent = new Intent(this, LandingPage.class);
         loginCredIntent.putExtra("loginMsg", "Login User");
         startActivityForResult(loginCredIntent, Constants.LOGIN_USER);
     }

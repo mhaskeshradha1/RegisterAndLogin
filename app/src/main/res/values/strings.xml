@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bayout - Real Estate App!</string>
+    <string name="app_name">TimeTransit - Predict a Transit Timings</string>
     <string name="title">Registration Form</string>
     <string name="register_button_label">Register User</string>
     <string name="login_button_label">Login User</string>
@@ -21,7 +21,7 @@
     <string name="startquiz">Start Quiz</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
-    <string name="realEstateImage">By Bayout Team:\nSalma\nShradha\nVikki</string>
+    <string name="realEstateImage">By Shradha Mhaske</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -39,4 +39,141 @@
     <string name="sort_by_last_name">Sort By Last Name</string>
     <string name="sort_by_priority">Sort By Priority</string>
     <string name="logout">logout</string>
+
+    <string-array name="line_list">
+        <item>NJ TRANSIT - NEC</item>
+        <item>NJ TRANSIT - NJCL</item>
+        <item>NJ TRANSIT - RVL</item>
+        <item>NJ TRANSIT - MBPJ</item>
+        <item>NJ TRANSIT - ME</item>
+        <item>NJ TRANSIT - PVL</item>
+        <item>NJ TRANSIT - MOBO</item>
+    </string-array>
+    <string-array name="day_list">
+        <item>holiday</item>
+        <item>workday</item>
+    </string-array>
+    <string-array name="hour_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="station_list">
+        <item>Trenton</item>
+        <item>Hoboken</item>
+        <item>MSU</item>
+        <item>PSNY</item>
+        <item>Spring Valley</item>
+        <item>Summit</item>
+        <item>Port Jervis</item>
+        <item>Gladstone</item>
+        <item>High Bridge</item>
+        <item>New Brunswick</item>
+        <item>Dover</item>
+        <item>Mount Olive</item>
+        <item>Morristown</item>
+        <item>Anderson Street</item>
+        <item>Waldwick</item>
+        <item>Plainfield</item>
+        <item>Secaucus</item>
+        <item>Edison</item>
+        <item>Linden</item>
+        <item>Rahway</item>
+        <item>Maplewood</item>
+        <item>NYPS</item>
+        <item>South Amboy</item>
+        <item>Newark Airport</item>
+        <item>Broad St</item>
+        <item>Woodbridge</item>
+        <item>Bay Street</item>
+        <item>Long Branch</item>
+        <item>Metropark</item>
+        <item>Princeton Junction</item>
+        <item>East Orange</item>
+        <item>Brick Church</item>
+        <item>Elizabeth</item>
+        <item>Newark Broad St.</item>
+        <item>Asbury Park</item>
+        <item>Hazlet</item>
+        <item>Watsessing Ave.</item>
+        <item>Jersey Ave</item>
+        <item>Princeton</item>
+        <item>Perth Amboy</item>
+        <item>Roselle Park</item>
+        <item>Aberdeen-Matawan</item>
+        <item>Dunellen</item>
+        <item>Walnut Street</item>
+        <item>Salisbury Mills</item>
+        <item>Morris Plains</item>
+        <item>Basking Ridge</item>
+        <item>Annandale</item>
+        <item>Clifton</item>
+        <item>Hillsdale</item>
+        <item>Sloatsburg</item>
+        <item>Rutherford</item>
+        <item>Teterboro</item>
+        <item>South Orange</item>
+        <item>Millburn</item>
+        <item>Little Falls</item>
+        <item>Glen Ridge</item>
+        <item>Middletown</item>
+        <item>Watchung Ave</item>
+        <item>NPS</item>
+        <item>EWR</item>
+        <item>Montclair Heights</item>
+        <item>Far Hills</item>
+        <item>Nanuet</item>
+        <item>Metuchen</item>
+        <item>Essex St.</item>
+        <item>Orange</item>
+        <item>Millington</item>
+        <item>SEC</item>
+        <item>Glen Rock</item>
+        <item>Lyons</item>
+        <item>Harriman</item>
+        <item>Bound Brook</item>
+        <item>Wood-Ridge</item>
+        <item>Radburn</item>
+        <item>Chatham</item>
+        <item>Somerville</item>
+        <item>Union</item>
+        <item>Paterson</item>
+        <item>Otisville</item>
+        <item>Ramsey Route 17</item>
+        <item>NBS</item>
+        <item>Campbell Hall</item>
+        <item>Bridgewater</item>
+        <item>Cranford</item>
+        <item>Short Hills</item>
+        <item>Emerson</item>
+        <item>Newark</item>
+        <item>Plauderville</item>
+        <item>River Edge</item>
+        <item>NJCL</item>
+        <item>Ridgewood</item>
+        <item>Suffern</item>
+        <item>Fanwood</item>
+        <item>Lebanon</item>
+    </string-array>
 </resources>

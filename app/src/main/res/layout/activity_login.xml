@@ -28,7 +28,7 @@
             android:layout_height="0dp"
             android:layout_weight="10"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bologo" />
+            app:srcCompat="@drawable/timetransit" />
         <!-- to do  add buttons for login and register -->
         <Button
             android:id="@+id/login"
